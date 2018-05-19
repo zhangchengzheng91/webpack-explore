@@ -1,0 +1,3 @@
+function test() {
+  alter('hello')
+}

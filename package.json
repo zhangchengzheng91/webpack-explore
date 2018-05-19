@@ -5,8 +5,16 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "test1": "echo \"Error: I SHOULD FAIL LOLOLOLOLOL \" && exit 1",
+    "foo": "echo \"fooo\" && exit 0",
+    "bar": "echo \"bar\" && exit 0",
+    "es-lint": "eslint --fix ."
   },
+  "pre-commit": [
+    "es-lint"
+  ],
+  "precommit.silent": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhangchengzheng91/webpack-explore.git"
@@ -18,11 +26,14 @@
   },
   "homepage": "https://github.com/zhangchengzheng91/webpack-explore#readme",
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
     "lodash": "^4.17.10",
     "react": "^16.3.2",
     "webpack": "^4.8.1"
   },
   "dependencies": {
+    "pre-commit": "^1.2.2",
     "webpack-cli": "^2.1.3"
   }
 }

@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 
 // TODO: asset managment
@@ -8,4 +8,4 @@ module.exports = {
     filename: 'bundle01.js',
     path: path.resolve(__dirname, 'dist')
   }
-};
+}

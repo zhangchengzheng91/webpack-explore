@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "var1": true,
+    "var2": false
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      { "SwitchCase": 1 }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "no-alert":"error",
+    "no-console": "error"
+  }
+}
