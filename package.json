@@ -28,6 +28,7 @@
   "homepage": "https://github.com/zhangchengzheng91/webpack-explore#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.3",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "file-loader": "^1.1.11",
@@ -43,6 +44,6 @@
   },
   "dependencies": {
     "pre-commit": "^1.2.2",
-    "webpack-cli": "^2.1.4"
+    "webpack-cli": "^3.0.1"
   }
 }
