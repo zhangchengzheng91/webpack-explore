@@ -11,6 +11,7 @@ function component() {
 
   btn.innerHTML = 'Click me and check the console!!'
   btn.onclick = printMe
+  btn.classList.add('test-sass')
   element.appendChild(btn)
 
   // Lodash, now imported by this script
@@ -25,3 +26,10 @@ function component() {
 }
 
 document.body.appendChild(component())
+
+if (module.hot) {
+  module.hot.accept('./print.js', function() {
+    console.log('Accepting the updated printMe module!')
+    printMe()
+  })
+}
