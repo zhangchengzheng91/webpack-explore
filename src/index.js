@@ -4,12 +4,15 @@ import './testSass.scss'
 import './testLess.less'
 //import photo from './asset/photo.jpg'
 import printMe from './print'
+import { cube } from './math'
 
 function component() {
-  var element = document.createElement('div')
+  //var element = document.createElement('div')
+  var element = document.createElement('pre')
   const btn = document.createElement('button')
 
-  btn.innerHTML = 'Click me and check the console!!'
+
+  //btn.innerHTML = 'Click me and check the console!!'
   btn.onclick = printMe
   btn.classList.add('test-sass')
   element.appendChild(btn)
@@ -22,6 +25,11 @@ function component() {
   //const img = new Image()
   //img.src = photo
   //element.appendChild(img)
+  element.innerHTML = [
+    'Hello webpack!',
+    '5 cubed is equal to ' + cube(6)
+  ].join('\n\n')
+
   return element
 }
 

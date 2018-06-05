@@ -6,6 +6,7 @@ const webpack = require('webpack')
 
 // TODO: asset managment
 module.exports = {
+  mode: "production",
   devtool: 'inline-source-map',
   entry: {
     app: './src/index.js',
