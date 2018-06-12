@@ -2,11 +2,11 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
     app: './src/index.js',
+    another: './src/another-module.js'
   },
   devServer: {
     contentBase: './dist',
@@ -20,11 +20,15 @@ module.exports = {
   plugins:[
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Production'
+      title: 'Code Spliting'
     }),
   ],
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        use: 'babel-loader'
+      },
       {
         test: /\.css$/,
         use: [
