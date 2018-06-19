@@ -50,8 +50,13 @@
 //    printMe()
 //  })
 //}
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+
+
+console.log('this=', this)
+//this.alert('hello world')
 
 ReactDOM.render(<App />, document.getElementById('root'))
