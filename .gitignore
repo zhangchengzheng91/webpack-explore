@@ -1,5 +1,8 @@
-/node_modules
-/package-lock.json
-/dist
+*/node_modules
+*/package-lock.json
+*/dist
 yarn.lock
 yarn-error.log
+
+.idea
+*/*.xml
