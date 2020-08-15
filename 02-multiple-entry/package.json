@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config=webpack.config.js",
     "watch": "webpack --config=webpack-watch.config.js  --watch",
-    "dev-server": "webpack-dev-server --config=webpack-dev-server.config.js"
+    "dev-server": "webpack-dev-server --config=webpack-dev-server.config.js",
+    "hash": "webpack --config=webpack-hash.config.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "html-webpack-plugin": "^4.3.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^0.10.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
