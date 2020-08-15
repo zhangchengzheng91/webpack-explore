@@ -1,7 +1,3 @@
-//import hello from './hello'
-//
-//document.write(hello('search'))
-
 import React from 'react'
 import ReactDom from 'react-dom'
 import './search.css'
@@ -16,9 +12,7 @@ class Search extends React.Component {
         <div>
           <img src={exampleImage} alt='exampleImage'/>
         </div>
-        <div style={{
-          backgroundImage: 'url("../assets/image/example-image.png")'
-        }}>
+        <div>
           this is inline style
         </div>
       </div>
