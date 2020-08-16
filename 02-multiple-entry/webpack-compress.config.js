@@ -52,16 +52,16 @@ module.exports = {
       cssProcessor: require('cssnano')
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src/search.html'),
-      filename: 'search.html',
-      chunk: ['search'],
-      inject: true,
+      template: path.join(__dirname, 'src/search.html'), // 模版路径。模板当中可以使用 ejs 的语法
+      filename: 'search.html', // 打包之后的文件名称
+      chunks: ['search'], // 要使用的 chunk
+      inject: true, // 将 js、css 注入 html
       minify: {
         html5: true,
         collapseWhitespace: true,
         preserveLineBreaks: false,
-        minifyCSS: true,
-        minifyJS: true,
+        minifyCSS: true, // 压缩 html 中的内联样式，包括 head 中的 style
+        minifyJS: true,  // 压缩 html 中的 js
         removeComments: false
       }
     }),
