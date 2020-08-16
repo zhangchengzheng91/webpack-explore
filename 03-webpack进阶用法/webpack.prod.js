@@ -31,25 +31,25 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'less-loader',
-          //'postcss-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: [
-                require('autoprefixer')({
-                  browsers: ['last 2 version', '> 1%', 'IOS 7']
-                })
-              ]
-            }
-          },
           {
             loader: 'px2rem-loader',
             options: {
               remUnit: 75,
               remPrecision: 8,
             }
-          }
+          },
+          'less-loader',
+          'postcss-loader',
+          //{
+          //  loader: 'postcss-loader',
+          //  options: {
+          //    plugins: [
+          //      require('autoprefixer')({
+          //        browsers: ['last 2 version', '> 1%', 'IOS 7']
+          //      })
+          //    ]
+          //  }
+          //}
         ]
       }, {
         test: /\.(png|jpg|gif)$/,
