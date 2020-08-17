@@ -1,7 +1,6 @@
 {
   "name": "02-multiple-entry",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -37,5 +36,9 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "devDependencies": {
+    "raw-loader": "^0.5.1"
+  },
+  "description": ""
 }
