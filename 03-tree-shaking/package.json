@@ -1,0 +1,15 @@
+{
+  "name": "03-inline-source-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "../node_modules/.bin/webpack --config webpack.prod.js",
+    "dev": "../node_modules/.bin/webpack-dev-server --open --config webpack.dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
