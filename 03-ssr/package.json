@@ -1,0 +1,13 @@
+{
+  "name": "03-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ssr": "../node_modules/.bin/webpack --config webpack.ssr.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
