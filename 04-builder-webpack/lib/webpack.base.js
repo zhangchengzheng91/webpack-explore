@@ -1,25 +1,27 @@
-const autoprefixer = require('autoprefixer')
-const glob = require('glob')
-const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const autoprefixer = require('autoprefixer');
+const glob = require('glob');
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+
+const projectRoot = process.cwd();
 
 const setMPA = () => {
-  const entry = {}
-  const htmlWebpackPlugins = []
-  const entryFiles = glob.sync(path.join(projectRoot, './src/*/index.js'))
+  const entry = {};
+  const htmlWebpackPlugins = [];
+  const entryFiles = glob.sync(path.join(projectRoot, './src/*/index.js'));
 
   Object.keys(entryFiles)
     .map((index) => {
-      const entryFile = entryFiles[index]
+      const entryFile = entryFiles[index];
       // '/Users/cpselvis/my-project/src/index/index.js'
 
-      const match = entryFile.match(/src\/(.*)\/index\.js/)
-      const pageName = match && match[1]
+      const match = entryFile.match(/src\/(.*)\/index\.js/);
+      const pageName = match && match[1];
 
-      entry[pageName] = entryFile
+      entry[pageName] = entryFile;
       return htmlWebpackPlugins.push(
         new HtmlWebpackPlugin({
           inlineSource: '.css$',
@@ -35,17 +37,17 @@ const setMPA = () => {
             minifyJS: true,
             removeComments: false,
           },
-        })
-      )
-    })
+        }),
+      );
+    });
 
   return {
     entry,
     htmlWebpackPlugins,
-  }
-}
+  };
+};
 
-const { entry, htmlWebpackPlugins } = setMPA()
+const { entry, htmlWebpackPlugins } = setMPA();
 
 module.exports = {
   entry,
@@ -55,8 +57,8 @@ module.exports = {
         test: /.js$/,
         use: [
           {
-            loader: 'babel-loader'
-          }
+            loader: 'babel-loader',
+          },
         ],
       },
       {
@@ -125,10 +127,10 @@ module.exports = {
     function errorPlugin() {
       this.hooks.done.tap('done', (stats) => {
         if (stats.compilation.errors && stats.compilation.errors.length && process.argv.indexOf('--watch') === -1) {
-          process.exit(1)
+          process.exit(1);
         }
-      })
+      });
     },
   ],
   stats: 'errors-only',
-}
+};

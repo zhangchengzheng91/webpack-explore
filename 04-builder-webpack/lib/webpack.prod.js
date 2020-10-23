@@ -1,7 +1,8 @@
-const merge = require('webpack-merge')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const merge = require('webpack-merge');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
-const baseConfig = require('./webpack.base')
+const cssnano = require('cssnano');
+const baseConfig = require('./webpack.base');
 
 const prodConfig = {
   mode: 'production',
@@ -40,6 +41,6 @@ const prodConfig = {
       },
     },
   },
-}
+};
 
-module.exports = merge(baseConfig, prodConfig)
+module.exports = merge(baseConfig, prodConfig);
