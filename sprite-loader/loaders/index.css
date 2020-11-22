@@ -1,0 +1,15 @@
+.img-fork {
+    display: inline-block;
+    background: url("images/fork.png?__sprite");
+}
+
+.img-github {
+    display: inline-block;
+    background: url("images/github.png?__sprite");
+}
+
+.img-twitter {
+    display: inline-block;
+    background: url("images/twitter.png?__sprite");
+}
+
