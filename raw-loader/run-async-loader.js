@@ -3,12 +3,12 @@ const path = require('path')
 const { runLoaders } = require('loader-runner')
 
 runLoaders({
-  resource: './demo.txt',
+  resource: './async.txt',
   loaders: [
     {
-      loader: path.resolve(__dirname, './loader/raw-loader.js'),
+      loader: path.resolve(__dirname, './loader/async-raw-loader.js'),
       options: {
-        name: 'test'
+        name: 'async test'
       }
     }
   ],
